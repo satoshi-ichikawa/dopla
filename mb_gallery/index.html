@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ニフティクラウドmobile backend × FirefoxOSアプリ</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header id="top-toolbar">
+      <h1>画像ギャラリー</h1>
+    </header>
+   
+    <!-- 写真を並べて表示する部分 -->
+    <div class="grid-table">
+      <div class="grid-table-body">
+      </div>
+    </div>
+    
+    <!-- 写真を並べる時のテンプレート  -->
+    <div class="templates">
+      <div class="grid-table-cell tappable" id="grid-table-cell-template">
+        <img src="" >
+      </div>
+    </div>
+    
+    <!-- 写真を撮るためのボタン -->
+    <div class="no-border-button tappable" style="position : relative">
+      写真を撮る
+      <form action="">
+        <input type="file" id="image-file" name="image" style="opacity: 0.0; position : absolute; left : 0; right : 0; top : 0; bottom : 0; z-index : 20;" />
+      </form>
+    </div>
+
+    <!-- JavaScriptライブラリの読み込み -->
+    <script src="javascripts/ncmb-latest.min.js"></script>
+    <script src="javascripts/tappable.js"></script>
+    <script src="javascripts/zepto.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
